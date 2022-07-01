@@ -1,0 +1,17 @@
+module.exports = (client,message,array) => {
+    //FRAMEWORK
+    console.log("ready")
+    client.user.setPresence({ 
+        activities: [{name: "for .autorole", type: 3}],
+        status: 'online' 
+    });
+    //FRAMEWORK
+    //AUTOROLE
+    client.channels.cache
+        .filter(channel => (channel.name === "autorole"&&channel.type === "GUILD_TEXT"))
+        .forEach(channel => {
+            if(!channel.permissionsFor(channel.guild.me).has(["READ_MESSAGE_HISTORY","VIEW_CHANNEL"])) return; 
+            channel.messages.fetch({limit:20})
+        });
+    //AUTOROLE
+}

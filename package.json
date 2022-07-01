@@ -1,0 +1,19 @@
+{
+    "name": "autorole",
+    "description": "Simple bot that streamlines your role channel.",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "engines": {
+        "node": "16.13.1"
+    },
+    "author": "pie",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^13.3.1",
+        "dotenv": "^8.2.0",
+        "enmap": "^5.8.2"
+    }
+}
